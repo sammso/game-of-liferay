@@ -26,6 +26,14 @@ PortletURL portletURL = renderResponse.createRenderURL();
 	<aui:nav cssClass="navbar-nav">
 		<aui:nav-item href="<%= mainURL.toString() %>" label="characters" selected="<%= true %>" />
 	</aui:nav>
+
+	<aui:nav-bar-search>
+		<aui:form action="<%= portletURL.toString() %>" name="searchFm">
+			<aui:nav-bar-search>
+				<liferay-ui:input-search markupView="lexicon" name="whatever" />
+			</aui:nav-bar-search>
+		</aui:form>
+	</aui:nav-bar-search>
 </aui:nav-bar>
 
 <liferay-frontend:management-bar
