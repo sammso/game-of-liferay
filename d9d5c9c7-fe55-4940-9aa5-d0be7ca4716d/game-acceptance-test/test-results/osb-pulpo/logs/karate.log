@@ -1,0 +1,763 @@
+15:06:21.813 [Test worker] DEBUG c.i.karate.cucumber.CucumberRunner - init feature file: src/testIntegration/resources/features/characters/add_character.feature
+15:06:22.166 [Test worker] DEBUG c.i.k.cucumber.KarateJunitFormatter - >> build/reports/tests/testIntegration/cucumber/characters/add_character.xml
+15:06:24.341 [Test worker] INFO  com.intuit.karate - test.url is: http://localhost:8080 
+15:06:25.493 [Test worker] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/jsonws/company/get-company-by-virtual-host?virtualHost=localhost
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:26.273 [Test worker] DEBUG com.intuit.karate - 
+1 < 200
+1 < Cache-Control: private, no-cache, no-store, must-revalidate
+1 < Content-Length: 201
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 28 Sep 2017 15:06:26 GMT
+1 < Server: Apache-Coyote/1.1
+1 < Set-Cookie: [JSESSIONID=5FC3CF08B1210B14CE1EB8BD09E9B5E3; Path=/; HttpOnly, GUEST_LANGUAGE_ID=en_US; Expires=Fri, 28-Sep-2018 15:06:26 GMT; Path=/; HttpOnly]
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1
+{"accountId":"20118","active":true,"companyId":"20116","homeURL":"","key":"RB3J9twn1jlgStG+Aq8Tuw==","logoId":"0","maxUsers":0,"mvccVersion":"1","mx":"liferay.com","system":false,"webId":"liferay.com"}
+
+15:06:26.317 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 1460
+15:06:26.579 [Test worker] DEBUG com.intuit.karate - 
+2 > GET http://localhost:8080/api/jsonws/group/get-group?companyId=20116&groupKey=Guest
+2 > Accept-Encoding: gzip,deflate
+2 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+2 > Connection: Keep-Alive
+2 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=5FC3CF08B1210B14CE1EB8BD09E9B5E3
+2 > Host: localhost:8080
+2 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:27.122 [Test worker] DEBUG com.intuit.karate - 
+2 < 200
+2 < Cache-Control: private, no-cache, no-store, must-revalidate
+2 < Content-Length: 664
+2 < Content-Type: application/json;charset=UTF-8
+2 < Date: Thu, 28 Sep 2017 15:06:26 GMT
+2 < Server: Apache-Coyote/1.1
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: SAMEORIGIN
+2 < X-XSS-Protection: 1
+{"active":true,"classNameId":"20045","classPK":"20143","companyId":"20116","creatorUserId":"20120","description":"","descriptionCurrentValue":"","descriptiveName":"Liferay","friendlyURL":"\/guest","groupId":"20143","groupKey":"Guest","inheritContent":false,"liveGroupId":"0","manualMembership":true,"membershipRestriction":0,"mvccVersion":"0","name":"<?xml version='1.0' encoding='UTF-8'?><root available-locales=\"en_US\" default-locale=\"en_US\"><Name language-id=\"en_US\">Guest<\/Name><\/root>","nameCurrentValue":"Guest","parentGroupId":"0","remoteStagingGroupCount":0,"site":true,"treePath":"\/20143\/","type":1,"uuid":"039e6eb8-ab73-2945-37cf-2788cf693606"}
+
+15:06:27.175 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 598
+15:06:27.410 [Test worker] DEBUG com.intuit.karate - 
+3 > GET http://localhost:8080/api/jsonws/user/get-user-by-screen-name?companyId=20116&screenName=test
+3 > Accept-Encoding: gzip,deflate
+3 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+3 > Connection: Keep-Alive
+3 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=5FC3CF08B1210B14CE1EB8BD09E9B5E3
+3 > Host: localhost:8080
+3 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:27.630 [Test worker] DEBUG com.intuit.karate - 
+3 < 200
+3 < Cache-Control: private, no-cache, no-store, must-revalidate
+3 < Content-Length: 799
+3 < Content-Type: application/json;charset=UTF-8
+3 < Date: Thu, 28 Sep 2017 15:06:27 GMT
+3 < Server: Apache-Coyote/1.1
+3 < X-Content-Type-Options: nosniff
+3 < X-Frame-Options: SAMEORIGIN
+3 < X-XSS-Protection: 1
+{"agreedToTermsOfUse":false,"comments":"","companyId":"20116","contactId":"20157","createDate":1506611070821,"defaultUser":false,"emailAddress":"test@liferay.com","emailAddressVerified":true,"facebookId":"0","failedLoginAttempts":0,"firstName":"Test","googleUserId":"","graceLoginCount":0,"greeting":"Welcome Test Test!","jobTitle":"","languageId":"en_US","lastFailedLoginDate":null,"lastLoginDate":1506611070927,"lastLoginIP":"","lastName":"Test","ldapServerId":"-1","lockout":false,"lockoutDate":null,"loginDate":1506611070927,"loginIP":"","middleName":"","modifiedDate":1506611185998,"mvccVersion":"2","openId":"","portraitId":"0","reminderQueryAnswer":"","reminderQueryQuestion":"","screenName":"test","status":0,"timeZoneId":"UTC","userId":"20156","uuid":"c48379c5-e291-5824-4d6e-9d791d88629f"}
+
+15:06:27.631 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 223
+15:06:27.882 [Test worker] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/jsonws/game.character/add-character?userId=20156&groupId=20143&name=Robb+Stark&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3ARobb_Stark-Richard_Madden.jpg
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:28.114 [Test worker] DEBUG com.intuit.karate - 
+1 < 200
+1 < Cache-Control: private, no-cache, no-store, must-revalidate
+1 < Content-Length: 317
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 28 Sep 2017 15:06:27 GMT
+1 < Server: Apache-Coyote/1.1
+1 < Set-Cookie: [JSESSIONID=62871384A8E2E2E4A6FD0450A7704D25; Path=/; HttpOnly, GUEST_LANGUAGE_ID=en_US; Expires=Fri, 28-Sep-2018 15:06:28 GMT; Path=/; HttpOnly]
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1
+{"characterId":"27823","companyId":"20116","createDate":1506611188097,"groupId":"20143","modifiedDate":1506611188097,"name":"Robb Stark","status":"ALIVE","url":"https:\/\/en.wikipedia.org\/wiki\/File:Robb_Stark-Richard_Madden.jpg","userId":"20156","userName":"Test Test","uuid":"9330c02c-2bde-f2f3-8e19-875128c413db"}
+
+15:06:28.116 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 235
+15:06:28.209 [Test worker] DEBUG com.intuit.karate - 
+2 > GET http://localhost:8080/api/jsonws/game.character/delete-character?characterId=27823
+2 > Accept-Encoding: gzip,deflate
+2 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+2 > Connection: Keep-Alive
+2 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=62871384A8E2E2E4A6FD0450A7704D25
+2 > Host: localhost:8080
+2 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:28.444 [Test worker] DEBUG com.intuit.karate - 
+2 < 200
+2 < Cache-Control: private, no-cache, no-store, must-revalidate
+2 < Content-Length: 317
+2 < Content-Type: application/json;charset=UTF-8
+2 < Date: Thu, 28 Sep 2017 15:06:27 GMT
+2 < Server: Apache-Coyote/1.1
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: SAMEORIGIN
+2 < X-XSS-Protection: 1
+{"characterId":"27823","companyId":"20116","createDate":1506611188097,"groupId":"20143","modifiedDate":1506611188097,"name":"Robb Stark","status":"ALIVE","url":"https:\/\/en.wikipedia.org\/wiki\/File:Robb_Stark-Richard_Madden.jpg","userId":"20156","userName":"Test Test","uuid":"9330c02c-2bde-f2f3-8e19-875128c413db"}
+
+15:06:28.445 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 237
+15:06:28.569 [Test worker] INFO  com.intuit.karate - test.url is: http://localhost:8080 
+15:06:28.842 [Test worker] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/jsonws/company/get-company-by-virtual-host?virtualHost=localhost
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:29.090 [Test worker] DEBUG com.intuit.karate - 
+1 < 200
+1 < Cache-Control: private, no-cache, no-store, must-revalidate
+1 < Content-Length: 201
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 28 Sep 2017 15:06:29 GMT
+1 < Server: Apache-Coyote/1.1
+1 < Set-Cookie: [JSESSIONID=51D65DCE43FC0523CFE9028220ED413F; Path=/; HttpOnly, GUEST_LANGUAGE_ID=en_US; Expires=Fri, 28-Sep-2018 15:06:29 GMT; Path=/; HttpOnly]
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1
+{"accountId":"20118","active":true,"companyId":"20116","homeURL":"","key":"RB3J9twn1jlgStG+Aq8Tuw==","logoId":"0","maxUsers":0,"mvccVersion":"1","mx":"liferay.com","system":false,"webId":"liferay.com"}
+
+15:06:29.092 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 251
+15:06:29.225 [Test worker] DEBUG com.intuit.karate - 
+2 > GET http://localhost:8080/api/jsonws/group/get-group?companyId=20116&groupKey=Guest
+2 > Accept-Encoding: gzip,deflate
+2 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+2 > Connection: Keep-Alive
+2 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=51D65DCE43FC0523CFE9028220ED413F
+2 > Host: localhost:8080
+2 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:29.434 [Test worker] DEBUG com.intuit.karate - 
+2 < 200
+2 < Cache-Control: private, no-cache, no-store, must-revalidate
+2 < Content-Length: 664
+2 < Content-Type: application/json;charset=UTF-8
+2 < Date: Thu, 28 Sep 2017 15:06:29 GMT
+2 < Server: Apache-Coyote/1.1
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: SAMEORIGIN
+2 < X-XSS-Protection: 1
+{"active":true,"classNameId":"20045","classPK":"20143","companyId":"20116","creatorUserId":"20120","description":"","descriptionCurrentValue":"","descriptiveName":"Liferay","friendlyURL":"\/guest","groupId":"20143","groupKey":"Guest","inheritContent":false,"liveGroupId":"0","manualMembership":true,"membershipRestriction":0,"mvccVersion":"0","name":"<?xml version='1.0' encoding='UTF-8'?><root available-locales=\"en_US\" default-locale=\"en_US\"><Name language-id=\"en_US\">Guest<\/Name><\/root>","nameCurrentValue":"Guest","parentGroupId":"0","remoteStagingGroupCount":0,"site":true,"treePath":"\/20143\/","type":1,"uuid":"039e6eb8-ab73-2945-37cf-2788cf693606"}
+
+15:06:29.455 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 230
+15:06:29.607 [Test worker] DEBUG com.intuit.karate - 
+3 > GET http://localhost:8080/api/jsonws/user/get-user-by-screen-name?companyId=20116&screenName=test
+3 > Accept-Encoding: gzip,deflate
+3 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+3 > Connection: Keep-Alive
+3 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=51D65DCE43FC0523CFE9028220ED413F
+3 > Host: localhost:8080
+3 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:29.822 [Test worker] DEBUG com.intuit.karate - 
+3 < 200
+3 < Cache-Control: private, no-cache, no-store, must-revalidate
+3 < Content-Length: 799
+3 < Content-Type: application/json;charset=UTF-8
+3 < Date: Thu, 28 Sep 2017 15:06:29 GMT
+3 < Server: Apache-Coyote/1.1
+3 < X-Content-Type-Options: nosniff
+3 < X-Frame-Options: SAMEORIGIN
+3 < X-XSS-Protection: 1
+{"agreedToTermsOfUse":false,"comments":"","companyId":"20116","contactId":"20157","createDate":1506611070821,"defaultUser":false,"emailAddress":"test@liferay.com","emailAddressVerified":true,"facebookId":"0","failedLoginAttempts":0,"firstName":"Test","googleUserId":"","graceLoginCount":0,"greeting":"Welcome Test Test!","jobTitle":"","languageId":"en_US","lastFailedLoginDate":null,"lastLoginDate":1506611070927,"lastLoginIP":"","lastName":"Test","ldapServerId":"-1","lockout":false,"lockoutDate":null,"loginDate":1506611070927,"loginIP":"","middleName":"","modifiedDate":1506611185998,"mvccVersion":"2","openId":"","portraitId":"0","reminderQueryAnswer":"","reminderQueryQuestion":"","screenName":"test","status":0,"timeZoneId":"UTC","userId":"20156","uuid":"c48379c5-e291-5824-4d6e-9d791d88629f"}
+
+15:06:29.823 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 221
+15:06:30.061 [Test worker] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/jsonws/game.character/add-character?userId=20156&groupId=20143&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3ARobb_Stark-Richard_Madden.jpg
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:30.343 [Test worker] DEBUG com.intuit.karate - 
+1 < 404
+1 < Cache-Control: private, no-cache, no-store, must-revalidate
+1 < Content-Length: 476
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 28 Sep 2017 15:06:30 GMT
+1 < Server: Apache-Coyote/1.1
+1 < Set-Cookie: [JSESSIONID=03345259AD69D395498661EBEAD52B17; Path=/; HttpOnly, GUEST_LANGUAGE_ID=en_US; Expires=Fri, 28-Sep-2018 15:06:30 GMT; Path=/; HttpOnly]
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1
+{"exception":"No JSON web service action with path /game.character/add-character and method GET for game","throwable":"com.liferay.portal.kernel.jsonwebservice.NoSuchJSONWebServiceException: No JSON web service action with path /game.character/add-character and method GET for game","error":{"message":"No JSON web service action with path /game.character/add-character and method GET for game","type":"com.liferay.portal.kernel.jsonwebservice.NoSuchJSONWebServiceException"}}
+
+15:06:30.355 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 297
+15:06:30.541 [Test worker] DEBUG c.i.karate.cucumber.CucumberRunner - init feature file: src/testIntegration/resources/features/characters/get_character.feature
+15:06:30.556 [Test worker] DEBUG c.i.k.cucumber.KarateJunitFormatter - >> build/reports/tests/testIntegration/cucumber/characters/get_character.xml
+15:06:30.647 [Test worker] INFO  com.intuit.karate - test.url is: http://localhost:8080 
+15:06:30.893 [Test worker] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/jsonws/company/get-company-by-virtual-host?virtualHost=localhost
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:31.204 [Test worker] DEBUG com.intuit.karate - 
+1 < 200
+1 < Cache-Control: private, no-cache, no-store, must-revalidate
+1 < Content-Length: 201
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 28 Sep 2017 15:06:30 GMT
+1 < Server: Apache-Coyote/1.1
+1 < Set-Cookie: [JSESSIONID=12DBF6F7D32A8ED4F4F72A4262DEEA6D; Path=/; HttpOnly, GUEST_LANGUAGE_ID=en_US; Expires=Fri, 28-Sep-2018 15:06:31 GMT; Path=/; HttpOnly]
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1
+{"accountId":"20118","active":true,"companyId":"20116","homeURL":"","key":"RB3J9twn1jlgStG+Aq8Tuw==","logoId":"0","maxUsers":0,"mvccVersion":"1","mx":"liferay.com","system":false,"webId":"liferay.com"}
+
+15:06:31.205 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 314
+15:06:31.340 [Test worker] DEBUG com.intuit.karate - 
+2 > GET http://localhost:8080/api/jsonws/group/get-group?companyId=20116&groupKey=Guest
+2 > Accept-Encoding: gzip,deflate
+2 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+2 > Connection: Keep-Alive
+2 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=12DBF6F7D32A8ED4F4F72A4262DEEA6D
+2 > Host: localhost:8080
+2 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:31.641 [Test worker] DEBUG com.intuit.karate - 
+2 < 200
+2 < Cache-Control: private, no-cache, no-store, must-revalidate
+2 < Content-Length: 664
+2 < Content-Type: application/json;charset=UTF-8
+2 < Date: Thu, 28 Sep 2017 15:06:31 GMT
+2 < Server: Apache-Coyote/1.1
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: SAMEORIGIN
+2 < X-XSS-Protection: 1
+{"active":true,"classNameId":"20045","classPK":"20143","companyId":"20116","creatorUserId":"20120","description":"","descriptionCurrentValue":"","descriptiveName":"Liferay","friendlyURL":"\/guest","groupId":"20143","groupKey":"Guest","inheritContent":false,"liveGroupId":"0","manualMembership":true,"membershipRestriction":0,"mvccVersion":"0","name":"<?xml version='1.0' encoding='UTF-8'?><root available-locales=\"en_US\" default-locale=\"en_US\"><Name language-id=\"en_US\">Guest<\/Name><\/root>","nameCurrentValue":"Guest","parentGroupId":"0","remoteStagingGroupCount":0,"site":true,"treePath":"\/20143\/","type":1,"uuid":"039e6eb8-ab73-2945-37cf-2788cf693606"}
+
+15:06:31.650 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 315
+15:06:31.817 [Test worker] DEBUG com.intuit.karate - 
+3 > GET http://localhost:8080/api/jsonws/user/get-user-by-screen-name?companyId=20116&screenName=test
+3 > Accept-Encoding: gzip,deflate
+3 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+3 > Connection: Keep-Alive
+3 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=12DBF6F7D32A8ED4F4F72A4262DEEA6D
+3 > Host: localhost:8080
+3 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:32.020 [Test worker] DEBUG com.intuit.karate - 
+3 < 200
+3 < Cache-Control: private, no-cache, no-store, must-revalidate
+3 < Content-Length: 799
+3 < Content-Type: application/json;charset=UTF-8
+3 < Date: Thu, 28 Sep 2017 15:06:31 GMT
+3 < Server: Apache-Coyote/1.1
+3 < X-Content-Type-Options: nosniff
+3 < X-Frame-Options: SAMEORIGIN
+3 < X-XSS-Protection: 1
+{"agreedToTermsOfUse":false,"comments":"","companyId":"20116","contactId":"20157","createDate":1506611070821,"defaultUser":false,"emailAddress":"test@liferay.com","emailAddressVerified":true,"facebookId":"0","failedLoginAttempts":0,"firstName":"Test","googleUserId":"","graceLoginCount":0,"greeting":"Welcome Test Test!","jobTitle":"","languageId":"en_US","lastFailedLoginDate":null,"lastLoginDate":1506611070927,"lastLoginIP":"","lastName":"Test","ldapServerId":"-1","lockout":false,"lockoutDate":null,"loginDate":1506611070927,"loginIP":"","middleName":"","modifiedDate":1506611185998,"mvccVersion":"2","openId":"","portraitId":"0","reminderQueryAnswer":"","reminderQueryQuestion":"","screenName":"test","status":0,"timeZoneId":"UTC","userId":"20156","uuid":"c48379c5-e291-5824-4d6e-9d791d88629f"}
+
+15:06:32.020 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 209
+15:06:32.155 [Test worker] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/jsonws/game.character/add-character?userId=20156&groupId=20143&name=Robb+Stark&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3ARobb_Stark-Richard_Madden.jpg
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:32.360 [Test worker] DEBUG com.intuit.karate - 
+1 < 200
+1 < Cache-Control: private, no-cache, no-store, must-revalidate
+1 < Content-Length: 317
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 28 Sep 2017 15:06:31 GMT
+1 < Server: Apache-Coyote/1.1
+1 < Set-Cookie: [JSESSIONID=7EAC14EDB988C70FAA79737AE9503E47; Path=/; HttpOnly, GUEST_LANGUAGE_ID=en_US; Expires=Fri, 28-Sep-2018 15:06:32 GMT; Path=/; HttpOnly]
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1
+{"characterId":"27824","companyId":"20116","createDate":1506611192349,"groupId":"20143","modifiedDate":1506611192349,"name":"Robb Stark","status":"ALIVE","url":"https:\/\/en.wikipedia.org\/wiki\/File:Robb_Stark-Richard_Madden.jpg","userId":"20156","userName":"Test Test","uuid":"cc1ecc4c-03e2-333f-7b83-c01b49798eff"}
+
+15:06:32.361 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 207
+15:06:32.387 [Test worker] DEBUG com.intuit.karate - 
+2 > GET http://localhost:8080/api/jsonws/game.character/get-character?characterId=27824
+2 > Accept-Encoding: gzip,deflate
+2 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+2 > Connection: Keep-Alive
+2 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=7EAC14EDB988C70FAA79737AE9503E47
+2 > Host: localhost:8080
+2 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:32.698 [Test worker] DEBUG com.intuit.karate - 
+2 < 200
+2 < Cache-Control: private, no-cache, no-store, must-revalidate
+2 < Content-Length: 317
+2 < Content-Type: application/json;charset=UTF-8
+2 < Date: Thu, 28 Sep 2017 15:06:32 GMT
+2 < Server: Apache-Coyote/1.1
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: SAMEORIGIN
+2 < X-XSS-Protection: 1
+{"characterId":"27824","companyId":"20116","createDate":1506611192349,"groupId":"20143","modifiedDate":1506611192349,"name":"Robb Stark","status":"ALIVE","url":"https:\/\/en.wikipedia.org\/wiki\/File:Robb_Stark-Richard_Madden.jpg","userId":"20156","userName":"Test Test","uuid":"cc1ecc4c-03e2-333f-7b83-c01b49798eff"}
+
+15:06:32.700 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 314
+15:06:32.769 [Test worker] DEBUG com.intuit.karate - 
+3 > GET http://localhost:8080/api/jsonws/game.character/delete-character?characterId=27824
+3 > Accept-Encoding: gzip,deflate
+3 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+3 > Connection: Keep-Alive
+3 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=7EAC14EDB988C70FAA79737AE9503E47
+3 > Host: localhost:8080
+3 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:33.001 [Test worker] DEBUG com.intuit.karate - 
+3 < 200
+3 < Cache-Control: private, no-cache, no-store, must-revalidate
+3 < Content-Length: 317
+3 < Content-Type: application/json;charset=UTF-8
+3 < Date: Thu, 28 Sep 2017 15:06:32 GMT
+3 < Server: Apache-Coyote/1.1
+3 < X-Content-Type-Options: nosniff
+3 < X-Frame-Options: SAMEORIGIN
+3 < X-XSS-Protection: 1
+{"characterId":"27824","companyId":"20116","createDate":1506611192349,"groupId":"20143","modifiedDate":1506611192349,"name":"Robb Stark","status":"ALIVE","url":"https:\/\/en.wikipedia.org\/wiki\/File:Robb_Stark-Richard_Madden.jpg","userId":"20156","userName":"Test Test","uuid":"cc1ecc4c-03e2-333f-7b83-c01b49798eff"}
+
+15:06:33.013 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 245
+15:06:33.047 [Test worker] INFO  com.intuit.karate - test.url is: http://localhost:8080 
+15:06:33.175 [Test worker] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/jsonws/company/get-company-by-virtual-host?virtualHost=localhost
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:33.369 [Test worker] DEBUG com.intuit.karate - 
+1 < 200
+1 < Cache-Control: private, no-cache, no-store, must-revalidate
+1 < Content-Length: 201
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 28 Sep 2017 15:06:32 GMT
+1 < Server: Apache-Coyote/1.1
+1 < Set-Cookie: [JSESSIONID=59DF018233BEBA4065EF67436C46F119; Path=/; HttpOnly, GUEST_LANGUAGE_ID=en_US; Expires=Fri, 28-Sep-2018 15:06:33 GMT; Path=/; HttpOnly]
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1
+{"accountId":"20118","active":true,"companyId":"20116","homeURL":"","key":"RB3J9twn1jlgStG+Aq8Tuw==","logoId":"0","maxUsers":0,"mvccVersion":"1","mx":"liferay.com","system":false,"webId":"liferay.com"}
+
+15:06:33.378 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 206
+15:06:33.482 [Test worker] DEBUG com.intuit.karate - 
+2 > GET http://localhost:8080/api/jsonws/group/get-group?companyId=20116&groupKey=Guest
+2 > Accept-Encoding: gzip,deflate
+2 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+2 > Connection: Keep-Alive
+2 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=59DF018233BEBA4065EF67436C46F119
+2 > Host: localhost:8080
+2 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:33.697 [Test worker] DEBUG com.intuit.karate - 
+2 < 200
+2 < Cache-Control: private, no-cache, no-store, must-revalidate
+2 < Content-Length: 664
+2 < Content-Type: application/json;charset=UTF-8
+2 < Date: Thu, 28 Sep 2017 15:06:33 GMT
+2 < Server: Apache-Coyote/1.1
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: SAMEORIGIN
+2 < X-XSS-Protection: 1
+{"active":true,"classNameId":"20045","classPK":"20143","companyId":"20116","creatorUserId":"20120","description":"","descriptionCurrentValue":"","descriptiveName":"Liferay","friendlyURL":"\/guest","groupId":"20143","groupKey":"Guest","inheritContent":false,"liveGroupId":"0","manualMembership":true,"membershipRestriction":0,"mvccVersion":"0","name":"<?xml version='1.0' encoding='UTF-8'?><root available-locales=\"en_US\" default-locale=\"en_US\"><Name language-id=\"en_US\">Guest<\/Name><\/root>","nameCurrentValue":"Guest","parentGroupId":"0","remoteStagingGroupCount":0,"site":true,"treePath":"\/20143\/","type":1,"uuid":"039e6eb8-ab73-2945-37cf-2788cf693606"}
+
+15:06:33.732 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 251
+15:06:33.816 [Test worker] DEBUG com.intuit.karate - 
+3 > GET http://localhost:8080/api/jsonws/user/get-user-by-screen-name?companyId=20116&screenName=test
+3 > Accept-Encoding: gzip,deflate
+3 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+3 > Connection: Keep-Alive
+3 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=59DF018233BEBA4065EF67436C46F119
+3 > Host: localhost:8080
+3 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:34.043 [Test worker] DEBUG com.intuit.karate - 
+3 < 200
+3 < Cache-Control: private, no-cache, no-store, must-revalidate
+3 < Content-Length: 799
+3 < Content-Type: application/json;charset=UTF-8
+3 < Date: Thu, 28 Sep 2017 15:06:33 GMT
+3 < Server: Apache-Coyote/1.1
+3 < X-Content-Type-Options: nosniff
+3 < X-Frame-Options: SAMEORIGIN
+3 < X-XSS-Protection: 1
+{"agreedToTermsOfUse":false,"comments":"","companyId":"20116","contactId":"20157","createDate":1506611070821,"defaultUser":false,"emailAddress":"test@liferay.com","emailAddressVerified":true,"facebookId":"0","failedLoginAttempts":0,"firstName":"Test","googleUserId":"","graceLoginCount":0,"greeting":"Welcome Test Test!","jobTitle":"","languageId":"en_US","lastFailedLoginDate":null,"lastLoginDate":1506611070927,"lastLoginIP":"","lastName":"Test","ldapServerId":"-1","lockout":false,"lockoutDate":null,"loginDate":1506611070927,"loginIP":"","middleName":"","modifiedDate":1506611185998,"mvccVersion":"2","openId":"","portraitId":"0","reminderQueryAnswer":"","reminderQueryQuestion":"","screenName":"test","status":0,"timeZoneId":"UTC","userId":"20156","uuid":"c48379c5-e291-5824-4d6e-9d791d88629f"}
+
+15:06:34.044 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 229
+15:06:34.239 [Test worker] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/jsonws/game.character/add-character?userId=20156&groupId=20143&name=Robb+Stark&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3ARobb_Stark-Richard_Madden.jpg
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:34.467 [Test worker] DEBUG com.intuit.karate - 
+1 < 200
+1 < Cache-Control: private, no-cache, no-store, must-revalidate
+1 < Content-Length: 317
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 28 Sep 2017 15:06:33 GMT
+1 < Server: Apache-Coyote/1.1
+1 < Set-Cookie: [JSESSIONID=205319AEF7E95C9F1F52128A5DC153EF; Path=/; HttpOnly, GUEST_LANGUAGE_ID=en_US; Expires=Fri, 28-Sep-2018 15:06:34 GMT; Path=/; HttpOnly]
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1
+{"characterId":"27825","companyId":"20116","createDate":1506611194449,"groupId":"20143","modifiedDate":1506611194449,"name":"Robb Stark","status":"ALIVE","url":"https:\/\/en.wikipedia.org\/wiki\/File:Robb_Stark-Richard_Madden.jpg","userId":"20156","userName":"Test Test","uuid":"b43df1ef-4fe4-b248-1d28-80acc4636f03"}
+
+15:06:34.468 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 230
+15:06:34.584 [Test worker] DEBUG com.intuit.karate - 
+2 > GET http://localhost:8080/api/jsonws/game.character/get-characters?groupId=20143&start=0&end=2
+2 > Accept-Encoding: gzip,deflate
+2 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+2 > Connection: Keep-Alive
+2 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=205319AEF7E95C9F1F52128A5DC153EF
+2 > Host: localhost:8080
+2 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:34.809 [Test worker] DEBUG com.intuit.karate - 
+2 < 200
+2 < Cache-Control: private, no-cache, no-store, must-revalidate
+2 < Content-Length: 572
+2 < Content-Type: application/json;charset=UTF-8
+2 < Date: Thu, 28 Sep 2017 15:06:34 GMT
+2 < Server: Apache-Coyote/1.1
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: SAMEORIGIN
+2 < X-XSS-Protection: 1
+[{"characterId":"26404","companyId":"20116","createDate":1506611080512,"groupId":"20143","modifiedDate":1506611080512,"name":"Daenerys Targaryen","status":"ALIVE","url":"\/o\/game-web\/images\/got\/daenerystargaryen.png","userId":"20120","userName":"","uuid":"ba577fe0-d30b-fa56-8925-27dbc7616eba"},{"characterId":"26406","companyId":"20116","createDate":1506611080547,"groupId":"20143","modifiedDate":1506611080547,"name":"Hodor","status":"ALIVE","url":"\/o\/game-web\/images\/got\/hodor.png","userId":"20120","userName":"","uuid":"66dfd8ca-7cc9-bb43-80e1-61044121e746"}]
+
+15:06:34.810 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 228
+15:06:34.897 [Test worker] DEBUG com.intuit.karate - 
+3 > GET http://localhost:8080/api/jsonws/game.character/delete-character?characterId=27825
+3 > Accept-Encoding: gzip,deflate
+3 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+3 > Connection: Keep-Alive
+3 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=205319AEF7E95C9F1F52128A5DC153EF
+3 > Host: localhost:8080
+3 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:35.126 [Test worker] DEBUG com.intuit.karate - 
+3 < 200
+3 < Cache-Control: private, no-cache, no-store, must-revalidate
+3 < Content-Length: 317
+3 < Content-Type: application/json;charset=UTF-8
+3 < Date: Thu, 28 Sep 2017 15:06:34 GMT
+3 < Server: Apache-Coyote/1.1
+3 < X-Content-Type-Options: nosniff
+3 < X-Frame-Options: SAMEORIGIN
+3 < X-XSS-Protection: 1
+{"characterId":"27825","companyId":"20116","createDate":1506611194449,"groupId":"20143","modifiedDate":1506611194449,"name":"Robb Stark","status":"ALIVE","url":"https:\/\/en.wikipedia.org\/wiki\/File:Robb_Stark-Richard_Madden.jpg","userId":"20156","userName":"Test Test","uuid":"b43df1ef-4fe4-b248-1d28-80acc4636f03"}
+
+15:06:35.127 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 233
+15:06:35.235 [Test worker] DEBUG c.i.karate.cucumber.CucumberRunner - init feature file: src/testIntegration/resources/features/characters/update_character.feature
+15:06:35.251 [Test worker] DEBUG c.i.k.cucumber.KarateJunitFormatter - >> build/reports/tests/testIntegration/cucumber/characters/update_character.xml
+15:06:35.329 [Test worker] INFO  com.intuit.karate - test.url is: http://localhost:8080 
+15:06:35.477 [Test worker] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/jsonws/company/get-company-by-virtual-host?virtualHost=localhost
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:35.685 [Test worker] DEBUG com.intuit.karate - 
+1 < 200
+1 < Cache-Control: private, no-cache, no-store, must-revalidate
+1 < Content-Length: 201
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 28 Sep 2017 15:06:34 GMT
+1 < Server: Apache-Coyote/1.1
+1 < Set-Cookie: [JSESSIONID=BDD70D53AF86ABEEE9F2D54AECD08DB0; Path=/; HttpOnly, GUEST_LANGUAGE_ID=en_US; Expires=Fri, 28-Sep-2018 15:06:35 GMT; Path=/; HttpOnly]
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1
+{"accountId":"20118","active":true,"companyId":"20116","homeURL":"","key":"RB3J9twn1jlgStG+Aq8Tuw==","logoId":"0","maxUsers":0,"mvccVersion":"1","mx":"liferay.com","system":false,"webId":"liferay.com"}
+
+15:06:35.686 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 210
+15:06:35.876 [Test worker] DEBUG com.intuit.karate - 
+2 > GET http://localhost:8080/api/jsonws/group/get-group?companyId=20116&groupKey=Guest
+2 > Accept-Encoding: gzip,deflate
+2 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+2 > Connection: Keep-Alive
+2 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=BDD70D53AF86ABEEE9F2D54AECD08DB0
+2 > Host: localhost:8080
+2 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:36.095 [Test worker] DEBUG com.intuit.karate - 
+2 < 200
+2 < Cache-Control: private, no-cache, no-store, must-revalidate
+2 < Content-Length: 664
+2 < Content-Type: application/json;charset=UTF-8
+2 < Date: Thu, 28 Sep 2017 15:06:36 GMT
+2 < Server: Apache-Coyote/1.1
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: SAMEORIGIN
+2 < X-XSS-Protection: 1
+{"active":true,"classNameId":"20045","classPK":"20143","companyId":"20116","creatorUserId":"20120","description":"","descriptionCurrentValue":"","descriptiveName":"Liferay","friendlyURL":"\/guest","groupId":"20143","groupKey":"Guest","inheritContent":false,"liveGroupId":"0","manualMembership":true,"membershipRestriction":0,"mvccVersion":"0","name":"<?xml version='1.0' encoding='UTF-8'?><root available-locales=\"en_US\" default-locale=\"en_US\"><Name language-id=\"en_US\">Guest<\/Name><\/root>","nameCurrentValue":"Guest","parentGroupId":"0","remoteStagingGroupCount":0,"site":true,"treePath":"\/20143\/","type":1,"uuid":"039e6eb8-ab73-2945-37cf-2788cf693606"}
+
+15:06:36.097 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 221
+15:06:36.210 [Test worker] DEBUG com.intuit.karate - 
+3 > GET http://localhost:8080/api/jsonws/user/get-user-by-screen-name?companyId=20116&screenName=test
+3 > Accept-Encoding: gzip,deflate
+3 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+3 > Connection: Keep-Alive
+3 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=BDD70D53AF86ABEEE9F2D54AECD08DB0
+3 > Host: localhost:8080
+3 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:36.446 [Test worker] DEBUG com.intuit.karate - 
+3 < 200
+3 < Cache-Control: private, no-cache, no-store, must-revalidate
+3 < Content-Length: 799
+3 < Content-Type: application/json;charset=UTF-8
+3 < Date: Thu, 28 Sep 2017 15:06:36 GMT
+3 < Server: Apache-Coyote/1.1
+3 < X-Content-Type-Options: nosniff
+3 < X-Frame-Options: SAMEORIGIN
+3 < X-XSS-Protection: 1
+{"agreedToTermsOfUse":false,"comments":"","companyId":"20116","contactId":"20157","createDate":1506611070821,"defaultUser":false,"emailAddress":"test@liferay.com","emailAddressVerified":true,"facebookId":"0","failedLoginAttempts":0,"firstName":"Test","googleUserId":"","graceLoginCount":0,"greeting":"Welcome Test Test!","jobTitle":"","languageId":"en_US","lastFailedLoginDate":null,"lastLoginDate":1506611070927,"lastLoginIP":"","lastName":"Test","ldapServerId":"-1","lockout":false,"lockoutDate":null,"loginDate":1506611070927,"loginIP":"","middleName":"","modifiedDate":1506611185998,"mvccVersion":"2","openId":"","portraitId":"0","reminderQueryAnswer":"","reminderQueryQuestion":"","screenName":"test","status":0,"timeZoneId":"UTC","userId":"20156","uuid":"c48379c5-e291-5824-4d6e-9d791d88629f"}
+
+15:06:36.447 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 238
+15:06:36.604 [Test worker] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/jsonws/game.character/add-character?userId=20156&groupId=20143&name=Robb+Stark&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3ARobb_Stark-Richard_Madden.jpg
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:36.803 [Test worker] DEBUG com.intuit.karate - 
+1 < 200
+1 < Cache-Control: private, no-cache, no-store, must-revalidate
+1 < Content-Length: 317
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 28 Sep 2017 15:06:36 GMT
+1 < Server: Apache-Coyote/1.1
+1 < Set-Cookie: [JSESSIONID=F452720AD4B2DCFA26A62FC4053F1F36; Path=/; HttpOnly, GUEST_LANGUAGE_ID=en_US; Expires=Fri, 28-Sep-2018 15:06:36 GMT; Path=/; HttpOnly]
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1
+{"characterId":"27826","companyId":"20116","createDate":1506611196789,"groupId":"20143","modifiedDate":1506611196789,"name":"Robb Stark","status":"ALIVE","url":"https:\/\/en.wikipedia.org\/wiki\/File:Robb_Stark-Richard_Madden.jpg","userId":"20156","userName":"Test Test","uuid":"6050c3a9-cec4-2071-4d30-b424c71ca5b4"}
+
+15:06:36.804 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 201
+15:06:36.893 [Test worker] DEBUG com.intuit.karate - 
+2 > GET http://localhost:8080/api/jsonws/game.character/update-character?userId=20156&groupId=20143&characterId=27826&name=Robb+Stark+2&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3ARobb_Stark-Richard_Madden2.jpg
+2 > Accept-Encoding: gzip,deflate
+2 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+2 > Connection: Keep-Alive
+2 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=F452720AD4B2DCFA26A62FC4053F1F36
+2 > Host: localhost:8080
+2 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:37.207 [Test worker] DEBUG com.intuit.karate - 
+2 < 200
+2 < Cache-Control: private, no-cache, no-store, must-revalidate
+2 < Content-Length: 320
+2 < Content-Type: application/json;charset=UTF-8
+2 < Date: Thu, 28 Sep 2017 15:06:37 GMT
+2 < Server: Apache-Coyote/1.1
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: SAMEORIGIN
+2 < X-XSS-Protection: 1
+{"characterId":"27826","companyId":"20116","createDate":1506611196789,"groupId":"20143","modifiedDate":1506611197195,"name":"Robb Stark 2","status":"ALIVE","url":"https:\/\/en.wikipedia.org\/wiki\/File:Robb_Stark-Richard_Madden2.jpg","userId":"20156","userName":"Test Test","uuid":"6050c3a9-cec4-2071-4d30-b424c71ca5b4"}
+
+15:06:37.210 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 320
+15:06:37.279 [Test worker] DEBUG com.intuit.karate - 
+3 > GET http://localhost:8080/api/jsonws/game.character/get-character?characterId=27826
+3 > Accept-Encoding: gzip,deflate
+3 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+3 > Connection: Keep-Alive
+3 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=F452720AD4B2DCFA26A62FC4053F1F36
+3 > Host: localhost:8080
+3 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:37.492 [Test worker] DEBUG com.intuit.karate - 
+3 < 200
+3 < Cache-Control: private, no-cache, no-store, must-revalidate
+3 < Content-Length: 320
+3 < Content-Type: application/json;charset=UTF-8
+3 < Date: Thu, 28 Sep 2017 15:06:37 GMT
+3 < Server: Apache-Coyote/1.1
+3 < X-Content-Type-Options: nosniff
+3 < X-Frame-Options: SAMEORIGIN
+3 < X-XSS-Protection: 1
+{"characterId":"27826","companyId":"20116","createDate":1506611196789,"groupId":"20143","modifiedDate":1506611197195,"name":"Robb Stark 2","status":"ALIVE","url":"https:\/\/en.wikipedia.org\/wiki\/File:Robb_Stark-Richard_Madden2.jpg","userId":"20156","userName":"Test Test","uuid":"6050c3a9-cec4-2071-4d30-b424c71ca5b4"}
+
+15:06:37.492 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 214
+15:06:37.651 [Test worker] DEBUG com.intuit.karate - 
+4 > GET http://localhost:8080/api/jsonws/game.character/delete-character?characterId=27826
+4 > Accept-Encoding: gzip,deflate
+4 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+4 > Connection: Keep-Alive
+4 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=F452720AD4B2DCFA26A62FC4053F1F36
+4 > Host: localhost:8080
+4 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:38.044 [Test worker] DEBUG com.intuit.karate - 
+4 < 200
+4 < Cache-Control: private, no-cache, no-store, must-revalidate
+4 < Content-Length: 320
+4 < Content-Type: application/json;charset=UTF-8
+4 < Date: Thu, 28 Sep 2017 15:06:37 GMT
+4 < Server: Apache-Coyote/1.1
+4 < X-Content-Type-Options: nosniff
+4 < X-Frame-Options: SAMEORIGIN
+4 < X-XSS-Protection: 1
+{"characterId":"27826","companyId":"20116","createDate":1506611196789,"groupId":"20143","modifiedDate":1506611197195,"name":"Robb Stark 2","status":"ALIVE","url":"https:\/\/en.wikipedia.org\/wiki\/File:Robb_Stark-Richard_Madden2.jpg","userId":"20156","userName":"Test Test","uuid":"6050c3a9-cec4-2071-4d30-b424c71ca5b4"}
+
+15:06:38.044 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 394
+15:06:38.107 [Test worker] DEBUG c.i.karate.cucumber.CucumberRunner - init feature file: src/testIntegration/resources/features/characters/delete_character.feature
+15:06:38.121 [Test worker] DEBUG c.i.k.cucumber.KarateJunitFormatter - >> build/reports/tests/testIntegration/cucumber/characters/delete_character.xml
+15:06:38.232 [Test worker] INFO  com.intuit.karate - test.url is: http://localhost:8080 
+15:06:38.469 [Test worker] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/jsonws/company/get-company-by-virtual-host?virtualHost=localhost
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:38.777 [Test worker] DEBUG com.intuit.karate - 
+1 < 200
+1 < Cache-Control: private, no-cache, no-store, must-revalidate
+1 < Content-Length: 201
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 28 Sep 2017 15:06:38 GMT
+1 < Server: Apache-Coyote/1.1
+1 < Set-Cookie: [JSESSIONID=7FBB78A52973FBED720D6FC4403B70B5; Path=/; HttpOnly, GUEST_LANGUAGE_ID=en_US; Expires=Fri, 28-Sep-2018 15:06:38 GMT; Path=/; HttpOnly]
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1
+{"accountId":"20118","active":true,"companyId":"20116","homeURL":"","key":"RB3J9twn1jlgStG+Aq8Tuw==","logoId":"0","maxUsers":0,"mvccVersion":"1","mx":"liferay.com","system":false,"webId":"liferay.com"}
+
+15:06:38.778 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 320
+15:06:38.971 [Test worker] DEBUG com.intuit.karate - 
+2 > GET http://localhost:8080/api/jsonws/group/get-group?companyId=20116&groupKey=Guest
+2 > Accept-Encoding: gzip,deflate
+2 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+2 > Connection: Keep-Alive
+2 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=7FBB78A52973FBED720D6FC4403B70B5
+2 > Host: localhost:8080
+2 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:39.266 [Test worker] DEBUG com.intuit.karate - 
+2 < 200
+2 < Cache-Control: private, no-cache, no-store, must-revalidate
+2 < Content-Length: 664
+2 < Content-Type: application/json;charset=UTF-8
+2 < Date: Thu, 28 Sep 2017 15:06:38 GMT
+2 < Server: Apache-Coyote/1.1
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: SAMEORIGIN
+2 < X-XSS-Protection: 1
+{"active":true,"classNameId":"20045","classPK":"20143","companyId":"20116","creatorUserId":"20120","description":"","descriptionCurrentValue":"","descriptiveName":"Liferay","friendlyURL":"\/guest","groupId":"20143","groupKey":"Guest","inheritContent":false,"liveGroupId":"0","manualMembership":true,"membershipRestriction":0,"mvccVersion":"0","name":"<?xml version='1.0' encoding='UTF-8'?><root available-locales=\"en_US\" default-locale=\"en_US\"><Name language-id=\"en_US\">Guest<\/Name><\/root>","nameCurrentValue":"Guest","parentGroupId":"0","remoteStagingGroupCount":0,"site":true,"treePath":"\/20143\/","type":1,"uuid":"039e6eb8-ab73-2945-37cf-2788cf693606"}
+
+15:06:39.267 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 298
+15:06:39.415 [Test worker] DEBUG com.intuit.karate - 
+3 > GET http://localhost:8080/api/jsonws/user/get-user-by-screen-name?companyId=20116&screenName=test
+3 > Accept-Encoding: gzip,deflate
+3 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+3 > Connection: Keep-Alive
+3 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=7FBB78A52973FBED720D6FC4403B70B5
+3 > Host: localhost:8080
+3 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:39.688 [Test worker] DEBUG com.intuit.karate - 
+3 < 200
+3 < Cache-Control: private, no-cache, no-store, must-revalidate
+3 < Content-Length: 799
+3 < Content-Type: application/json;charset=UTF-8
+3 < Date: Thu, 28 Sep 2017 15:06:38 GMT
+3 < Server: Apache-Coyote/1.1
+3 < X-Content-Type-Options: nosniff
+3 < X-Frame-Options: SAMEORIGIN
+3 < X-XSS-Protection: 1
+{"agreedToTermsOfUse":false,"comments":"","companyId":"20116","contactId":"20157","createDate":1506611070821,"defaultUser":false,"emailAddress":"test@liferay.com","emailAddressVerified":true,"facebookId":"0","failedLoginAttempts":0,"firstName":"Test","googleUserId":"","graceLoginCount":0,"greeting":"Welcome Test Test!","jobTitle":"","languageId":"en_US","lastFailedLoginDate":null,"lastLoginDate":1506611070927,"lastLoginIP":"","lastName":"Test","ldapServerId":"-1","lockout":false,"lockoutDate":null,"loginDate":1506611070927,"loginIP":"","middleName":"","modifiedDate":1506611185998,"mvccVersion":"2","openId":"","portraitId":"0","reminderQueryAnswer":"","reminderQueryQuestion":"","screenName":"test","status":0,"timeZoneId":"UTC","userId":"20156","uuid":"c48379c5-e291-5824-4d6e-9d791d88629f"}
+
+15:06:39.689 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 275
+15:06:39.853 [Test worker] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/jsonws/game.character/add-character?userId=20156&groupId=20143&name=Robb+Stark&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3ARobb_Stark-Richard_Madden.jpg
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:40.077 [Test worker] DEBUG com.intuit.karate - 
+1 < 200
+1 < Cache-Control: private, no-cache, no-store, must-revalidate
+1 < Content-Length: 317
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 28 Sep 2017 15:06:40 GMT
+1 < Server: Apache-Coyote/1.1
+1 < Set-Cookie: [JSESSIONID=997D5746B8B15A188A477A5DBB35776F; Path=/; HttpOnly, GUEST_LANGUAGE_ID=en_US; Expires=Fri, 28-Sep-2018 15:06:40 GMT; Path=/; HttpOnly]
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1
+{"characterId":"27827","companyId":"20116","createDate":1506611200058,"groupId":"20143","modifiedDate":1506611200058,"name":"Robb Stark","status":"ALIVE","url":"https:\/\/en.wikipedia.org\/wiki\/File:Robb_Stark-Richard_Madden.jpg","userId":"20156","userName":"Test Test","uuid":"b44e2e86-d8b8-d871-bd6a-17a9fcd10dd3"}
+
+15:06:40.077 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 228
+15:06:40.102 [Test worker] DEBUG com.intuit.karate - 
+2 > GET http://localhost:8080/api/jsonws/game.character/delete-character?characterId=27827
+2 > Accept-Encoding: gzip,deflate
+2 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+2 > Connection: Keep-Alive
+2 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=997D5746B8B15A188A477A5DBB35776F
+2 > Host: localhost:8080
+2 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:40.325 [Test worker] DEBUG com.intuit.karate - 
+2 < 200
+2 < Cache-Control: private, no-cache, no-store, must-revalidate
+2 < Content-Length: 317
+2 < Content-Type: application/json;charset=UTF-8
+2 < Date: Thu, 28 Sep 2017 15:06:40 GMT
+2 < Server: Apache-Coyote/1.1
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: SAMEORIGIN
+2 < X-XSS-Protection: 1
+{"characterId":"27827","companyId":"20116","createDate":1506611200058,"groupId":"20143","modifiedDate":1506611200058,"name":"Robb Stark","status":"ALIVE","url":"https:\/\/en.wikipedia.org\/wiki\/File:Robb_Stark-Richard_Madden.jpg","userId":"20156","userName":"Test Test","uuid":"b44e2e86-d8b8-d871-bd6a-17a9fcd10dd3"}
+
+15:06:40.325 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 224
+15:06:40.339 [Test worker] DEBUG com.intuit.karate - 
+3 > GET http://localhost:8080/api/jsonws/game.character/get-character?characterId=27827
+3 > Accept-Encoding: gzip,deflate
+3 > Authorization: Basic dGVzdEBsaWZlcmF5LmNvbTp0ZXN0
+3 > Connection: Keep-Alive
+3 > Cookie: GUEST_LANGUAGE_ID=en_US; JSESSIONID=997D5746B8B15A188A477A5DBB35776F
+3 > Host: localhost:8080
+3 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+
+15:06:40.550 [Test worker] DEBUG com.intuit.karate - 
+3 < 500
+3 < Cache-Control: private, no-cache, no-store, must-revalidate
+3 < Connection: close
+3 < Content-Length: 306
+3 < Content-Type: application/json;charset=UTF-8
+3 < Date: Thu, 28 Sep 2017 15:06:40 GMT
+3 < Server: Apache-Coyote/1.1
+3 < X-Content-Type-Options: nosniff
+3 < X-Frame-Options: SAMEORIGIN
+3 < X-XSS-Protection: 1
+{"exception":"No Character exists with the primary key 27827","throwable":"com.liferay.game.exception.NoSuchCharacterException: No Character exists with the primary key 27827","error":{"message":"No Character exists with the primary key 27827","type":"com.liferay.game.exception.NoSuchCharacterException"}}
+
+15:06:40.550 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 212
