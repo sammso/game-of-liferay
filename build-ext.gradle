@@ -86,8 +86,8 @@ if (GradleUtil.getProperty(project, "docker.apply.plugin").toBoolean()) {
 	apply plugin: AppDockerPlugin
 
 	appDocker {
-		imageName this.getImageName()
-		imageUser this.getOrg()
+		imageName "game-of-liferay"
+		imageUser "chipironlabs"
 		inputDir "game-docker"
 	}
 
@@ -173,29 +173,9 @@ task runDocker(type: Exec) {
 			'-v', "${rootDir}/build/jacoco:/jacoco/",
 			'-d',
 			'--name', "liferay-portal",
-			getImageNameWithUserAndVersion()
+			"chipironlabs/game-of-liferay:latest"
 
 	finalizedBy checkDocker
-}
-
-def getImageName() {
-	return "${project.property('docker.image.name')}"
-}
-
-def getImageVersion() {
-	return "${project.property('docker.image.version')}"
-}
-
-def getOrg() {
-	return "${project.property('docker.org')}"
-}
-
-def getImageNameWithUser() {
-	return getOrg() + "/" + getImageName()
-}
-
-def getImageNameWithUserAndVersion() {
-	return getImageNameWithUser() + ":" + getImageVersion()
 }
 
 def getTestUrl() {
