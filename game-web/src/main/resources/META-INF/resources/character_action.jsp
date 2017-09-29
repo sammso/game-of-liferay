@@ -55,7 +55,7 @@ Character character = (Character)row.getObject();
 		</portlet:actionURL>
 
 		<liferay-ui:icon
-			message="kill"
+			message="Kiss"
 			url="<%= killCharacterURL %>"
 		/>
 	</c:if>
