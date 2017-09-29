@@ -35,9 +35,7 @@ before_install:
 
     # Build Docker Image and Run
 
-    - source ${TRAVIS_BUILD_DIR}/game-deployment/aws/deployment-pipeline/config/setup_deployment_pipeline.env
-
-    - ./gradlew buildAppDocker runDocker -Pdocker.image.name=$DOCKER_IMAGE_NAME -Pdocker.image.version=latest -Pdocker.org=$DOCKER_ORG
+    - ./gradlew buildAppDocker runDocker
 
 install: true
 
