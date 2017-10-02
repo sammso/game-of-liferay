@@ -7,7 +7,6 @@ A sample Liferay application that shows:
 * Integration with Coveralls for Code Coverage calculation
 
 [![Build Status](https://travis-ci.org/liferay-labs/game-of-liferay.svg?branch=master)](https://travis-ci.org/liferay-labs/game-of-liferay)
-
 [![Coverage Status](https://coveralls.io/repos/github/liferay-labs/game-of-liferay/badge.svg?branch=master)](https://coveralls.io/github/liferay-labs/game-of-liferay?branch=master)
 
 
