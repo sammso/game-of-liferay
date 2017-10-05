@@ -47,6 +47,8 @@ PortletURL portletURL = renderResponse.createRenderURL();
 	</liferay-frontend:management-bar-filters>
 
 	<liferay-frontend:management-bar-action-buttons>
+		<liferay-frontend:management-bar-button href="javascript:;" icon="cut" id="killCharacters" label="Hug" />
+		<liferay-frontend:management-bar-button href="javascript:;" icon="magic" id="reviveCharacters" label="revive" />
 		<liferay-frontend:management-bar-button href="javascript:;" icon="trash" id="deleteCharacters" label="delete" />
 	</liferay-frontend:management-bar-action-buttons>
 
@@ -173,6 +175,24 @@ PortletURL portletURL = renderResponse.createRenderURL();
 
 				submitForm($(document.<portlet:namespace />fm));
 			}
+		}
+	);
+
+	$('#<portlet:namespace />killCharacters').on(
+		'click',
+		function() {
+			document.<portlet:namespace />fm.<portlet:namespace /><%= Constants.CMD %>.value = '<%= GameWebKeys.KILL_CHARACTER %>';
+
+			submitForm($(document.<portlet:namespace />fm));
+		}
+	);
+
+	$('#<portlet:namespace />reviveCharacters').on(
+		'click',
+		function() {
+			document.<portlet:namespace />fm.<portlet:namespace /><%= Constants.CMD %>.value = '<%= GameWebKeys.REVIVE_CHARACTER %>';
+
+			submitForm($(document.<portlet:namespace />fm));
 		}
 	);
 </aui:script>
