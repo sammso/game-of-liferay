@@ -26,6 +26,14 @@ PortletURL portletURL = renderResponse.createRenderURL();
 	<aui:nav cssClass="navbar-nav">
 		<aui:nav-item href="<%= mainURL.toString() %>" label="characters" selected="<%= true %>" />
 	</aui:nav>
+
+	<aui:nav-bar-search>
+		<aui:form action="<%= portletURL.toString() %>" name="searchFm">
+			<aui:nav-bar-search>
+				<liferay-ui:input-search markupView="lexicon" name="whatever" />
+			</aui:nav-bar-search>
+		</aui:form>
+	</aui:nav-bar-search>
 </aui:nav-bar>
 
 <liferay-frontend:management-bar
@@ -163,6 +171,13 @@ PortletURL portletURL = renderResponse.createRenderURL();
 		</liferay-ui:search-container>
 	</aui:form>
 </div>
+
+<liferay-frontend:add-menu>
+	<liferay-frontend:add-menu-item
+		title='<%= LanguageUtil.get(request, "add-new-character") %>'
+		url="<%= gameDisplayContext.getEditURL().toString() %>"
+	/>
+</liferay-frontend:add-menu>
 
 <aui:script sandbox="<%= true %>">
 	$('#<portlet:namespace />deleteCharacters').on(
