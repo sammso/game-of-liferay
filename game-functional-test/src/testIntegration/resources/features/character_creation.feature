@@ -4,14 +4,14 @@ Feature: Creation of Characters
 
     Scenario: Adding a new Character (Arya)
 
-        #Given I am in the list of characters
-        #And Arya Stark doesn't exist
-        #When I add a new character called Arya Stark
-        #Then I see Arya Stark in the list of characters
+        Given I am in the list of characters
+        And Arya Stark doesn't exist
+        When I add a new character called Arya Stark
+        Then I see Arya Stark in the list of characters
 
     Scenario: Adding a new Character without a name
 
-        #Given I am in the list of characters
-        #When I add a new character without a name
+        Given I am in the list of characters
+        When I add a new character without a name
         #Then a girl has no name
-        #Then I can't save the character
+        Then I can't save the character
