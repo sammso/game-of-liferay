@@ -164,6 +164,13 @@ PortletURL portletURL = renderResponse.createRenderURL();
 	</aui:form>
 </div>
 
+<liferay-frontend:add-menu>
+	<liferay-frontend:add-menu-item
+		title='<%= LanguageUtil.get(request, "Add Something") %>'
+		url="<%= gameDisplayContext.getEditURL().toString() %>"
+	/>
+</liferay-frontend:add-menu>
+
 <aui:script sandbox="<%= true %>">
 	$('#<portlet:namespace />deleteCharacters').on(
 		'click',
