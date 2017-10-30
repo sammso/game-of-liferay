@@ -82,6 +82,8 @@ configure(subprojects.findAll {!it.childProjects && !it.name.contains('theme')})
 	}
 }
 
+// comment
+
 if (GradleUtil.getProperty(project, "docker.apply.plugin").toBoolean()) {
 	apply plugin: AppDockerPlugin
 
