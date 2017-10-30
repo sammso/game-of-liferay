@@ -87,7 +87,7 @@ if (GradleUtil.getProperty(project, "docker.apply.plugin").toBoolean()) {
 
 	appDocker {
 		imageName "game-of-liferay"
-		imageUser "chipironlabs"
+		imageUser System.getenv().get("DOCKER_ORG")
 		inputDir "game-docker"
 	}
 
