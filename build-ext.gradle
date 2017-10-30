@@ -175,7 +175,7 @@ task runDocker(type: Exec) {
 			'-v', "${rootDir}/build/jacoco:/jacoco/",
 			'-d',
 			'--name', "liferay-portal",
-			"chipironlabs/game-of-liferay:latest"
+			System.getenv().get("DOCKER_USER") + "/game-of-liferay:latest"
 
 	finalizedBy checkDocker
 }
