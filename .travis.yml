@@ -46,6 +46,12 @@ script:
 
     - ./gradlew dumpJacoco
     - ./gradlew coveralls
+    
+    # Publish docker image to Docker Hub
+
+    - 'if [ "$TRAVIS_EVENT_TYPE" = "push" ] && [ "$TRAVIS_BRANCH" = "master" ]; then
+           ./gradlew pushAppDockerImage -Pdocker.image.name=$DOCKER_IMAGE_NAME -Pdocker.org=$DOCKER_ORG;
+       fi'
 
 before_cache:
     - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock

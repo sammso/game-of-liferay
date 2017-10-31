@@ -16,4 +16,31 @@ configure(subprojects.findAll {!it.childProjects}) {
 	apply plugin: "com.liferay.defaults.plugin"
 }
 
-apply from: "build-ext.gradle"
+if ( !System.getenv().containsKey("GITHUB_TOKEN") ) {
+	gradle.taskGraph.whenReady { graph ->
+	
+			def disabledTasks = [
+				"findbugsMain"  ,
+				"compileTestIntegrationJava",
+				"findbugsTestIntegration",
+				"unzipJar",
+				"generateJSPJava",
+				"writeFindBugsProject"
+			]
+	
+	    graph.allTasks.findAll { 
+	    	println "Name : " + it.name
+	    	
+	    	if (disabledTasks.contains(it.name)) {
+	    		println "Disable : " + it.name
+	    		it.enabled=false
+	    	}
+	    	else {
+					println "Enabled : " + it.name
+				}    	
+	    }
+	}
+}
+else {
+	apply from: "build-ext.gradle"
+}
