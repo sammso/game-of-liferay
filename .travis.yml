@@ -34,8 +34,8 @@ before_install:
     - chmod +x catch-reports.sh
 
     # Build Docker Image and Run
-
-    - ./gradlew buildAppDocker runDocker
+    
+    - ./gradlew buildAppDocker runDocker -Pdocker.image.name=$DOCKER_IMAGE_NAME -Pdocker.image.version=latest -Pdocker.org=$DOCKER_ORG
 
 install: true
 
